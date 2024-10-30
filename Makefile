@@ -1,20 +1,21 @@
-NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRC = $(wildcard ft_*.c)
-OBJ = $(SRC:.c=.o)
-HEADER = libft.h
+SRCS = ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c \
+       ft_isalpha.c  ft_isdigit.c  ft_memset.c
+OBJS = $(SRC:.c=.o)
+HFILE = libft.h
+NAME = libft.a
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
-%.o: %.c $(HEADER)
+%.o: %.c $(HFILE)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
@@ -25,5 +26,3 @@ test:
 	make fclean
 
 re: fclean all
-
-.PHONY: all clean fclean re
