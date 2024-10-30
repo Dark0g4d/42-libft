@@ -21,5 +21,5 @@ void	*memset(void *s, int c, size_t n)
 	str = (unsigned char *)s;
 	while (i < n)
 		str[i++] = (unsigned char)c;
-	return (ptr);
+	return (s);
 }
