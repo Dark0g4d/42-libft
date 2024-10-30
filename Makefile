@@ -1,23 +1,28 @@
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-SRCS = ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c \
-       ft_isalpha.c ft_isdigit.c ft_memset.c
-OBJS = $(SRCS:.c=.o)
 NAME = libft.a
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+SRC = $(wildcard ft_*.c)
+OBJ = $(SRC:.c=.o)
+HEADER = libft.h
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
-%.o: %.c libft.h 
+%.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
+
+test:
+	cd ../libft-unit-test; \
+		make f
+	make fclean
 
 re: fclean all
 
