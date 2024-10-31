@@ -6,27 +6,38 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:04:59 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/10/31 12:48:36 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/10/31 18:27:18 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t			i;
-	size_t			j;
 	unsigned char	*source;
-	unsigned char	*dst;
+	unsigned char	*destination;
 
-	i = 0;
-	j = 0;
-	dst = (unsigned char *)dest;
 	source = (unsigned char *)src;
-	while (dst[i] != '\0')
-		i++;
-	while (j < n && source[j])
-		dst[i++] = source[j++];
-	dst[i] = '\0';
-	return (dest);
+	destination = (unsigned char *)dst;
+	if (dst == NULL && src == NULL)
+		return (dst);
+	while (n > 0)
+	{
+		destination[n - 1] = source[n - 1];
+		n--;
+	}
+	return (dst);
+}
+
+int	main(void)
+{
+	char src[] = " banana!";
+	char dst[] = "I like";
+	char *result;
+	size_t size = 4;
+
+	result = ft_memcpy(dst, src, size);
+	printf("%s", result);
+
+	return (0);
 }
