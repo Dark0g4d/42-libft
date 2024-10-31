@@ -6,12 +6,11 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:04:59 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/10/31 11:41:55 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/10/31 12:48:36 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

@@ -22,7 +22,7 @@ fclean: clean
 	rm -f $(NAME)
 
 test:
-	cd ../libftTester; \
+	cd libftTester; \
 		make a
 	make fclean
 
