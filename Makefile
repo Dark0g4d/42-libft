@@ -22,8 +22,8 @@ fclean: clean
 	rm -f $(NAME)
 
 test:
-	cd ../libft-unit-test; \
-		make f
+	cd ../libftTester; \
+		make a
 	make fclean
 
 re: fclean all
