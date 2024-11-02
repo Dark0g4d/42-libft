@@ -19,12 +19,13 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	source = (unsigned char *)src;
 	destination = (unsigned char *)dest;
-	if (dest == NULL && src == NULL)
-		return (dest);
-	while (n > 0)
+	if (dest && src)
 	{
-		destination[n - 1] = source[n - 1];
-		n--;
+		while (n > 0)
+		{
+			destination[n - 1] = source[n - 1];
+			n--;
+		}
 	}
 	return (dest);
 }
