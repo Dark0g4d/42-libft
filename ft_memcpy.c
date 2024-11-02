@@ -28,16 +28,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-int	main(void)
-{
-	char src[] = " banana!";
-	char dst[] = "I like";
-	char *result;
-	size_t size = 4;
-
-	result = ft_memcpy(dst, src, size);
-	printf("%s", result);
-
-	return (0);
-}
