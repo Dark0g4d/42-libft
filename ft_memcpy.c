@@ -12,19 +12,19 @@
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*source;
 	unsigned char	*destination;
 
 	source = (unsigned char *)src;
-	destination = (unsigned char *)dst;
-	if (dst == NULL && src == NULL)
-		return (dst);
+	destination = (unsigned char *)dest;
+	if (dest == NULL && src == NULL)
+		return (dest);
 	while (n > 0)
 	{
 		destination[n - 1] = source[n - 1];
 		n--;
 	}
-	return (dst);
+	return (dest);
 }
