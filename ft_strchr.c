@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/05 22:02:42 by gcerquei          #+#    #+#             */
+/*   Updated: 2024/11/05 22:03:41 by gcerquei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -5,9 +17,9 @@ char	*ft_strchr(const char *s, int c)
 	int	i;
 
 	i = -1;
-	while (s[i + 1] && s[i + 1] != c)
+	while (s[i + 1] && s[i + 1] != (char)c)
 		i++;
-	if (s[i + 1] == c)
+	if (s[i + 1] == (char)c)
 		return ((char *)&s[i + 1]);
 	return (NULL);
 }

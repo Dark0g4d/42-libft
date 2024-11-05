@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 11:04:59 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/10/31 18:27:18 by gcerquei         ###   ########.fr       */
+/*   Created: 2024/11/05 22:02:10 by gcerquei          #+#    #+#             */
+/*   Updated: 2024/11/05 22:03:45 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*source;
-	unsigned char	*destination;
+	unsigned char	*str;
+	unsigned char	uc;
 
-	source = (unsigned char *)src;
-	destination = (unsigned char *)dst;
-	if (dst == NULL && src == NULL)
-		return (dst);
-	while (n > 0)
+	str = (unsigned char *)s;
+	uc = (unsigned char)c;
+	while (n--)
 	{
-		destination[n - 1] = source[n - 1];
-		n--;
+		if (*str == uc)
+			return (str);
+		str++;
 	}
-	return (dst);
+	return (NULL);
 }
