@@ -11,18 +11,22 @@ NAME = libft.a
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
 
 %.o: %.c $(HFILE)
-	$(CC) $(CFLAGS) -c $< -o $@
+	@echo "compiling c files into o files..."
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	@echo "removing objs files..."; 
+	@rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	@echo "removing lib and objs..."
+	@rm -f $(NAME)
 
 test:
+	@echo "testing..."
 	cd libftTester; \
 		make a
 	make fclean
