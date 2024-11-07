@@ -6,36 +6,35 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 19:58:38 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/07 20:51:03 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/07 21:05:00 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strcpy(char *dest, char *src)
+static char	*ft_strcpy(char *dst, const char *src)
 {
 	int	i;
 
 	i = 0;
-	while (*src)
+	while (src[i])
 	{
-		dest[i] = *src;
-		src++;
+		dst[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	dst[i] = '\0';
+	return (dst);
 }
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *s)
 {
 	int		len;
 	char	*dup;
 
-	len = ft_strlen(src);
+	len = ft_strlen(s);
 	dup = malloc((len + 1) * sizeof(char));
 	if (dup == NULL)
 		return (NULL);
-	ft_strcpy(dup, src);
+	ft_strcpy(dup, s);
 	return (dup);
 }
