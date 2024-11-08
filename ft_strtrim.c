@@ -14,6 +14,11 @@ char    *ft_strtrim(char const *s1, char const *set)
     strtrm = malloc(len + 1);
     if (strtrm == NULL)
         return (NULL);
+    while (i < len && s1[i])
+    {
+        
+        i++;
+    }
     
     return (strtrm);
 }
