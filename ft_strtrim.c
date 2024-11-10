@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 23:15:05 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/10 00:27:01 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/10 02:20:22 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int i;
-	int j;
-	int len;
-	char *strtrm;
+	int		i;
+	int		j;
+	int		len;
+	char	*strtrm;
 
 	i = 0;
 	j = 0;
