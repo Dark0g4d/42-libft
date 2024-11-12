@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 22:02:59 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/12 19:28:57 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/12 19:43:39 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 	size_t	src_len;
 
 	i = 0;
-	if (src == NULL && dsize == 0)
-		return (0);
-	if (src == NULL || dst == NULL)
-		return (0);
 	src_len = ft_strlen(src);
+	if (dsize = 0)
+		return (src_len);
 	dst_len = ft_strlen(dst);
 	if (dsize <= dst_len)
 		return (dsize + src_len);
