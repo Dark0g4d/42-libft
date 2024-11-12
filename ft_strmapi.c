@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 23:03:10 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/11 23:59:54 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/12 00:15:58 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *str;
-	size_t i;
+	char	*str;
+	size_t	i;
 
 	i = -1;
 	if (s == NULL || f == NULL)
