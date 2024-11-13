@@ -10,6 +10,8 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 	   ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 	   ft_putendl_fd.c ft_putnbr_fd.c
 OBJS = $(SRCS:.c=.o)
+BONUS_SRC = ft_lstnew.c ft_lstadd_front.c
+BONUS_OBJ = $(BONUS_SRC:.c=.o)
 HFILE = libft.h
 NAME = libft.a
 
@@ -22,9 +24,12 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJ)
 
 fclean: clean
 	rm -f $(NAME)
+
+bonus: $(OBJ) $(BONUS_OBJ)
+	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 
 re: fclean all
