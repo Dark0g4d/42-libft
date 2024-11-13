@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 01:08:46 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/13 01:09:00 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/13 01:20:55 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_lstsize(t_list *lst)
 	int	i;
 
 	i = 0;
-	while (lst->next != NULL)
+	while (lst != NULL)
 	{
 		i++;
 		lst = lst->next;
