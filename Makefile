@@ -20,7 +20,7 @@ NAME = libft.a
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS);
+	ar rcs $(NAME) $(OBJS)
 
 %.o: %.c $(HFILE)
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -32,7 +32,7 @@ fclean: clean
 	rm -f $(NAME)
 
 bonus: $(OBJ) $(BONUS_OBJ)
-	ar rcs $(NAME) $(BONUS_OBJ);
+	ar rcs $(NAME) $(BONUS_OBJ)
 
 re: fclean all
 
