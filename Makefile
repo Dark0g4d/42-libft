@@ -20,9 +20,7 @@ NAME = libft.a
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@if [ ! -f $(NAME) ] || [ "$(OBJS)" -nt "$(NAME)" ]; then \
-		ar rcs $(NAME) $(OBJS); \
-	fi
+	ar rcs $(NAME) $(OBJS);
 
 %.o: %.c $(HFILE)
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -34,9 +32,7 @@ fclean: clean
 	rm -f $(NAME)
 
 bonus: $(OBJ) $(BONUS_OBJ)
-	@if [ ! -f $(NAME) ] || [ "$(BONUS_OBJ)" -nt "$(NAME)" ]; then \
-		ar rcs $(NAME) $(BONUS_OBJ); \
-	fi
+	ar rcs $(NAME) $(BONUS_OBJ);
 
 re: fclean all
 
