@@ -35,3 +35,5 @@ bonus: $(OBJ) $(BONUS_OBJ)
 	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 
 re: fclean all
+
+.PHONY: all clean fclean bonus re
