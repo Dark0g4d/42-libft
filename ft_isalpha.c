@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:13:35 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/10/30 12:13:59 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:46:03 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,14 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
+/*
+int main(void)
+{
+	int	c;
+
+	c = 65;
+	printf("is alpha: i% char: %c", ft_isalpha(c), c);
+	c = 49;
+	printf("is alpha: i% char: %c", ft_isalpha(c), c);
+}
+*/

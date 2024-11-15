@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:12:44 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/13 23:56:46 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:47:17 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,16 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
+/*
+int main(void)
+{
+	int	c;
+
+	c = 47;
+	printf("isalnum: i% char: %c", ft_isalnum(c), c);
+	c = 49;
+	printf("isalnum: i% char: %c", ft_isalnum(c), c);
+	c = 65;
+	printf("isalnum: i% char: %c", ft_isalnum(c), c);
+}
+*/

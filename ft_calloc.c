@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 19:55:33 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/07 19:56:05 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:44:58 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	if (size != 0 && nmemb > (size_t)-1 / size)
+	if (nmemb && nmemb > (size_t)-1 / size)
 		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (ptr)
 		ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }
+
