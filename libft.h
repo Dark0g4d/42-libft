@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:18:44 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/13 03:30:14 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/16 04:16:46 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <string.h>
 
 typedef struct s_list
 {

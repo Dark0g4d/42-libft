@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 22:02:10 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/05 22:03:45 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/16 04:50:52 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,15 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+/*
+int	main(void)
+{
+	char	*str = "Hello!";
+	char	*result;
+	int		c = 'e';
+	size_t	size = 0;
+	
+	result = ft_memchr(str, c, size);
+	printf("%s", result);
+}
+*/

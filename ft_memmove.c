@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 22:02:25 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/16 03:50:45 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/16 04:30:05 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,16 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	const unsigned char		*source;
 	size_t					i;
 
-	i = 0;
 	destination = (unsigned char *)dst;
 	source = (const unsigned char *)src;
 	if (n == 0)
 		return (dst);
 	if (destination < source)
-	{
-		while (i < n)
-		{
-			destination[i] = source[i];
-			i++;
-		}
-	}
+		while (n-- > 0)
+			*destination++ = *source++;
 	else
-	{
 		while (n-- > 0)
 			destination[n] = source[n];
-	}
 	return (dst);
 }
 /*
@@ -51,9 +43,9 @@ int	main(void)
 
 	result = ft_memmove(n_src, n_dst, size);
 	printf("null: %s\n", result);
-	size = 1;
-	result = ft_memmove(n_src, n_dst, size);
-	printf("segfault: %s\n", result);
+	//size = 1;
+	//result = ft_memmove(n_src, n_dst, size);
+	//printf("segfault: %s\n", result);
 	size = ft_strlen(no_src) + 1;
 	result = ft_memmove(no_dst, no_src, size);
 	printf("no overlap: %s\n", result); 
