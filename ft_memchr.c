@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 22:02:10 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/16 04:50:52 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/16 15:21:22 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,15 @@ void	*ft_memchr(const void *s, int c, size_t n)
 /*
 int	main(void)
 {
-	char	*str = "Hello!";
-	char	*result;
+	char	*str = "Hello";
+	char	*r_memchr;
+	char	*r_ftmemchr;
 	int		c = 'e';
-	size_t	size = 0;
+	size_t	size = 2;
 	
-	result = ft_memchr(str, c, size);
-	printf("%s", result);
+	r_memchr = memchr(str, c, size);
+	r_ftmemchr = ft_memchr(str, c, size);
+	printf("libc: %s\n", r_memchr);
+	printf("libft: %s\n", r_ftmemchr);
 }
 */
