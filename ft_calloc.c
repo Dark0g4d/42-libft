@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 19:55:33 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/15 18:44:58 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/16 04:59:22 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }
-

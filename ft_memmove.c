@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 22:02:25 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/16 04:30:05 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/16 04:59:57 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	unsigned char			*destination;
 	const unsigned char		*source;
-	size_t					i;
 
 	destination = (unsigned char *)dst;
 	source = (const unsigned char *)src;
