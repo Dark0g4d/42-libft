@@ -66,16 +66,13 @@ char	*ft_itoa(int n)
 	ft_putnbr(ptr, n, len);
 	return (ptr);
 }
-
+/*
 int	main(void)
 {
-	char	*r_itoa;
 	char	*r_ftitoa;
 	int		n = 10;
 
-	r_itoa = itoa(n);
 	r_ftitoa = ft_itoa(n);
-	printf("libc: %s\n", r_itoa);
 	printf("libft: %s\n", r_ftitoa);
 }
-
+*/
