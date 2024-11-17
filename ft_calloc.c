@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 19:55:33 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/16 15:05:36 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/17 01:30:41 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main(void)
 
 	r_calloc = calloc(0, 0);
 	r_ftcalloc = ft_calloc(0, 0);
-	printf("%s", r_calloc);
-	printf("%s", r_ftcalloc);
+	printf("libc: %s\n", r_calloc);
+	printf("libft: %s\n", r_ftcalloc);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:14:15 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/15 18:46:39 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/17 01:47:08 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,12 @@ int	ft_isdigit(int c)
 	return (0);
 }
 /*
-int main(void)
+int	main(void)
 {
 	int	c;
 
-	c = 49;
-	printf("isdigit: i% char: %c", ft_isdigit(c), c);
-	c = 65;
-	printf("isdigit: i% char: %c", ft_isdigit(c), c);
+	c = 47;
+	printf("libc: %i int: %i\n", isdigit(c), c);
+	printf("libft: %i int: %i\n", ft_isdigit(c), c);
 }
 */

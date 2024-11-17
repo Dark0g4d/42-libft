@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 17:05:04 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/15 18:51:38 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/17 01:30:09 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,13 @@ void	ft_bzero(void *s, size_t n)
 }
 /*
 int main(void)
-{
-	char buffer[10];
+{	
+	char	p_bzero[10];
+	char	p_ftbzero[10];
 
-	printf("before ft_bzero: %s", str);
-	ft_bzero(buffer, 10);
-	printf("after ft_bzero:  %s", str);
+	bzero(p_bzero, 10);
+	ft_bzero(p_ftbzero, 10);
+	printf("libc: %s\n", p_bzero);
+	printf("libft: %s\n", p_ftbzero);
 }
 */

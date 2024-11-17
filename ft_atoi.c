@@ -6,9 +6,11 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:03:34 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/11 17:20:35 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/17 01:31:00 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -33,3 +35,17 @@ int	ft_atoi(const char *nptr)
 		result = 10 * result + (nptr[i++] - '0');
 	return (result * sign);
 }
+/*
+int	main(void)
+{
+	int		r_atoi;
+	int		r_ftatoi;
+	char	*p_atoi = "-120ab";
+	char	*p_ftatoi = "-120ab";
+
+	r_atoi = atoi(p_atoi);
+	r_ftatoi = ft_atoi(p_ftatoi);
+	printf("libc: %i\n", r_atoi);
+	printf("libft: %i\n", r_ftatoi);
+}
+*/

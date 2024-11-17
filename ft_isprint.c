@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:16:25 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/15 18:48:42 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/17 01:46:48 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,12 @@ int	ft_isprint(int c)
 	return (0);
 }
 /*
-int main(void)
+int	main(void)
 {
 	int	c;
 
-	c = 0;
-	printf("isprint: i% char: %c", ft_isprint(c), c);
-	c = 32;
-	printf("isprint: i% char: %c", ft_isprint(c), c);
-	c = 126;
-	printf("isprint: i% char: %c", ft_isprint(c), c);
+	c = 47;
+	printf("libc: %i char: %c\n", isprint(c), c);
+	printf("libft: %i char: %c\n", ft_isprint(c), c);
 }
 */

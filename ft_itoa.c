@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft	ft_putnbr.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:56:47 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/11 17:18:23 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/17 02:45:02 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,27 +29,27 @@ static int	length(int n)
 	return (len);
 }
 
-static void	itoa(char *stritoa, int n, int len)
+static void	ft_putnbr(char *ptr, int n, int len)
 {
 	int	is_negative;
 
 	is_negative = 0;
 	if (n < 0)
 		is_negative = 1;
-	stritoa[len] = '\0';
+	ptr[len] = '\0';
 	if (n == -2147483648)
 	{
-		ft_strlcpy(stritoa, "-2147483648", 12);
+		ft_strlcpy(ptr, "-2147483648", 12);
 		return ;
 	}
 	if (is_negative)
 	{
-		stritoa[0] = '-';
+		ptr[0] = '-';
 		n = -n;
 	}
 	while (len-- > is_negative)
 	{
-		stritoa[len] = (n % 10) + '0';
+		ptr[len] = (n % 10) + '0';
 		n /= 10;
 	}
 }
@@ -57,12 +57,25 @@ static void	itoa(char *stritoa, int n, int len)
 char	*ft_itoa(int n)
 {
 	int		len;
-	char	*stritoa;
+	char	*ptr;
 
 	len = length(n);
-	stritoa = malloc((len + 1) * sizeof(char));
-	if (stritoa == NULL)
+	ptr = malloc((len + 1) * sizeof(char));
+	if (ptr == NULL)
 		return (NULL);
-	itoa(stritoa, n, len);
-	return (stritoa);
+	ft_putnbr(ptr, n, len);
+	return (ptr);
 }
+
+int	main(void)
+{
+	char	*r_itoa;
+	char	*r_ftitoa;
+	int		n = 10;
+
+	r_itoa = itoa(n);
+	r_ftitoa = ft_itoa(n);
+	printf("libc: %s\n", r_itoa);
+	printf("libft: %s\n", r_ftitoa);
+}
+
