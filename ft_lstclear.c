@@ -6,7 +6,7 @@
 /*   By: gcerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 02:31:49 by gcerquei          #+#    #+#             */
-/*   Updated: 2024/11/13 02:47:23 by gcerquei         ###   ########.fr       */
+/*   Updated: 2024/11/17 15:44:24 by gcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,18 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	*lst = NULL;
 }
+/*
+static void	nothing(void *content)
+{
+	(void)content;
+}
+
+int	main(void)
+{
+	void	*content = "Banana";
+	t_list	*new = ft_lstnew(content);
+
+	printf("content: %s", (char *)new->content);
+	ft_lstclear(&new, nothing);
+}
+*/
